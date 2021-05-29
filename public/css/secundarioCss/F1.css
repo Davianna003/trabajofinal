@@ -1,0 +1,174 @@
+
+
+/*  MENU */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body{
+    margin: 0;
+    font-family: swap;
+}
+
+header{
+    width: 100%;
+    background-color:wheat
+}
+
+#btn-menu {
+    display: none;
+    
+
+}
+.btn-menu >.img{
+    width: 100px;
+    height: 100px;
+    text-align: left;
+
+}
+
+
+
+
+header label{
+    display: block;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+  
+}
+
+header label:hover{
+    cursor:pointer;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.menu ul{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+}
+
+
+menu :hover{
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.menu li a{
+    display: block;
+    padding: 15px 20px;
+    color: black;
+    font-size: large;
+    text-decoration: none;
+}
+
+.menu li{
+    border-right: 1px solid #fff;
+}
+
+
+
+
+
+
+
+
+
+
+.logo{
+    background-color: bisque;
+    height: 170px;
+    text-align: center;
+  
+}
+   
+.logo > img{
+    height: 150 px;
+    width: 300px;
+    text-align: left;
+ 
+    
+}
+
+@media (max-width:768px){
+    header label{
+        display: block;
+    }
+    
+    .menu{
+        position: absolute;
+        background: beige;
+        width: 70%;
+        margin-left: -70%;
+        transition: all 0.5s;
+    }
+
+    .menu ul{
+        flex-direction: column;
+    }
+
+    .menu li{
+        border-top: 1px solid #fff;
+    }
+    
+
+    #btn-menu:checked ~ .menu{
+        margin: 0; 
+    }
+}
+
+
+
+
+
+
+/*PRODUCTO*/
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Dancing Script', cursive;
+}
+
+body{
+    background: whitesmoke;
+}
+
+.contenedor{
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 60px;
+    background: bisque;
+    margin-top: 100px;
+    border-top: 6px solid grey;
+
+}
+
+.contenedor img{
+    width: 300px;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+
+}
+
+.titulo {
+    font-size: 40px;
+    margin-bottom: 60px;
+
+}
+
+.contenedor p{
+    font-size: 18px;
+    font-weight: 300px;
+}
+
+
+
+
+
+
+
