@@ -3,59 +3,66 @@ const app = express();
 const nodemailer = require('nodemailer');
 const port = process.env.PORT || 3000;
 
-app.use(express.static(__dirname + "/public"));
-app.use(express.json())
-app.use(express.urlencoded({
-    extended: false
-}));
+
+
+
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + "/public/pages/principales/finalhtml.html");
+    res.render('page/final');
 });
 
 app.get('/nosotros', (req, res) => {
-    res.sendFile(__dirname + "/public/pages/principales/nosotros.html");
+    res.render('page/nosotros');
 });
 
 app.get('/productos', (req, res) => {
-    res.sendFile(__dirname + "/public/pages/principales/menuhtml.html");
+    res.render('page/productos');
 });
 
 app.get('/testimonios', (req, res) => {
-    res.sendFile(__dirname + "/public/pages/principales/testimonios.html");
+    res.render('page/testimonios');
 });
 
 app.get('/contacto', (req, res) => {
-    res.sendFile(__dirname + "/public/pages/principales/formulario.html");
+    res.render('page/formulario');
 });
 
 
 
 app.get('/f1', (req, res) => {
-    res.sendFile(__dirname + "/public/pages/secundarias/F1.html");
+    res.render('page/F1');
 });
 
 app.get('/f2', (req, res) => {
-    res.sendFile(__dirname + "/public/pages/secundarias/F2.html");
+    res.render('page/F2');
 });
 
 app.get('/f3', (req, res) => {
-    res.sendFile(__dirname + "/public/pages/secundarias/F3.html");
+    res.render('page/F3');
 });
 
 app.get('/f4', (req, res) => {
-    res.sendFile(__dirname + "/public/pages/secundarias/F4.html");
+    res.render('page/F4');
 });
 
 app.get('/f5', (req, res) => {
-    res.sendFile(__dirname + "/public/pages/secundarias/F5.html");
+    res.render('page/F5');
 });
 
 app.get('/f6', (req, res) => {
-    res.sendFile(__dirname + "/public/pages/secundarias/F6.html");
+    res.render('page/F6');
 });
 
 
 //form
+app.use(express.static(__dirname + "/public"));
+app.use(express.json())
+app.use(express.urlencoded({
+    extended: false
+}));
+
+app.set('view engine', 'ejs');
+app.set('views', __dirname + '/views');
+
 
 app.post('/contacto', (req, res) => {
 
@@ -88,13 +95,13 @@ app.post('/contacto', (req, res) => {
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'yamilethp697@gmail.com',
-            pass: 'allweneedislove'
+            user: 'avadoreavadore003@gmail.com',
+            pass: 'avadore003'
         }
     });
 
     const info = {
-        from: 'yamilethp697@gmail.com',
+        from: 'avadoreavadore003@gmail.com',
         to: 'yamilethp697@gmail.com',
         subecjt: 'Datos para contactar',
         html: contenHTML
@@ -107,9 +114,7 @@ app.post('/contacto', (req, res) => {
             console.log('email enviado');
         }
     })
-    res.sendFile(__dirname + "/public/pages/principales/finalhtml.html");
+    res.render('page/final');
 });
-
-
 
 app.listen(port, () => console.log(`app listening on port ${port}`));
