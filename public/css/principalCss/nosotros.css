@@ -6,6 +6,34 @@ body {
     font-family: swap;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+#subir__arriba {
+    width: 70px;
+    height: 70px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    position: fixed;
+    bottom: 20px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+    bottom: 20px;
+    right: 4px;
+    z-index: 999;
+}
+
+#subir__arriba:hover {
+    color: brown;
+
+    transition: 0.4s;
+}
+
 header {
     width: 100%;
     background-color: wheat;
@@ -80,14 +108,13 @@ menu :hover {
     height: 170px;
     text-align: center;
 
+
 }
 
 .logo>img {
-    height: 150 px;
     width: 300px;
     text-align: left;
-
-
+    object-fit: cover;
 }
 
 @media (max-width:768px) {
@@ -128,44 +155,63 @@ body {
     background: whitesmoke;
 }
 
-.contenedor img {
-    margin-right: 10px;
-    margin-top: 50px;
+.contenedor .about {
     text-align: center;
-    padding: 50px;
-    margin-left: 250px;
+    padding: 5% 5% 5%;
+    margin: auto;
+    display: block;
 
+}
+
+.contenedor img {
+    text-align: center;
+    padding: 0 7%;
+    margin: auto;
+    display: block;
 
 }
 
 .contenedor p {
-    margin-right: 10px;
-    margin-top: 5px;
-    padding: 30px;
-    margin-left: 650px;
-    float: left;
-
+    margin-bottom: 10%
 }
 
 
 /* Letra, Titulo*/
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
 
-.titulo {
+.tituloP {
     font-size: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 100px;
     font-family: 'Dancing Script', cursive;
-    margin-right: 10px;
     padding: 20px;
     margin-left: 650px;
 }
 
+.titulo {
+    font-size: 20px;
+
+    font-family: 'Dancing Script', cursive;
 
 
+}
 
 .contenedor2 img {
-    margin-left: 50px;
-    margin-top: 200px;
+
     text-align: left;
     display: flex;
+    float: left;
+}
+
+footer {
+    bottom: 0;
+    background-color: rgb(48, 45, 45);
+    text-align: center;
+}
+
+footer img {
+    width: 300px;
+    height: 160px;
+    object-fit: cover;
+    bottom: 0;
+    margin-top: 2.5%;
 }

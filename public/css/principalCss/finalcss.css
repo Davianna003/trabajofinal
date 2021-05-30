@@ -5,6 +5,34 @@ body {
     font-family: swap;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+#subir__arriba {
+    width: 70px;
+    height: 70px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    position: fixed;
+    bottom: 20px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+    bottom: 20px;
+    right: 4px;
+    z-index: 999;
+}
+
+#subir__arriba:hover {
+    color: brown;
+
+    transition: 0.4s;
+}
+
 header {
     width: 100%;
     background-color: wheat;
@@ -82,11 +110,9 @@ menu :hover {
 }
 
 .logo>img {
-    height: 150px;
+    object-fit: cover;
     width: 300px;
     text-align: left;
-
-
 }
 
 
@@ -143,19 +169,18 @@ menu :hover {
 }
 
 footer {
-    bottom: 0%;
-    background-color: black;
-    width: 100%;
-    height: auto;
+    bottom: 0;
+    background-color: rgb(48, 45, 45);
+    text-align: center;
 }
 
-#prueba{
-    color: blanchedalmond;
-    width: 35%;
-    font-size: 14pt;
+footer img {
+    width: 300px;
+    height: 160px;
+    object-fit: cover;
+    bottom: 0;
+    margin-top: 2.5%;
 }
-
-
 
 
 
